@@ -1,0 +1,23 @@
+server:
+  port: 5555
+  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+      
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: THREAD
+          thread:
+            timeoutInMilliseconds: 20000
+default:
+  ribbon:
+    maxAutoRetries: 0
+    MaxAutoRetriesNextServer: 2
+    ConnectTimeout: 800
+    ReadTimeout: 250
+    OkToRetryOnAllOperations: true

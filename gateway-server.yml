@@ -12,11 +12,12 @@ hystrix:
       execution:
         isolation:
           strategy: THREAD
-          thread:
-            timeoutInMilliseconds: 20000
+        thread:
+          timeoutInMilliseconds: 20000
+
 default:
   ribbon:
-    maxAutoRetries: 0
+    maxAutoRetries: 1
     MaxAutoRetriesNextServer: 2
     ConnectTimeout: 800
     ReadTimeout: 250

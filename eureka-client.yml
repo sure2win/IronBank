@@ -12,4 +12,4 @@ eureka:
       enabled: true
     lease:
       duration: 5
-    registry-fetch-interval-seconds: 1
+    registryFetchIntervalSeconds: 20

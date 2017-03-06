@@ -2,7 +2,7 @@ eureka:
   instance:
     leaseRenewalIntervalInSeconds: 20
     leaseExpirationDurationInSeconds: 30
-    instanceId: ${spring.cloud.client.hostname}:${spring.application.name}
+    instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.uuid}}
   client:
     registerWithEureka: true
     fetchRegistry: true

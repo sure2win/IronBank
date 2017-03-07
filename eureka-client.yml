@@ -13,3 +13,4 @@ eureka:
     lease:
       duration: 5
     registryFetchIntervalSeconds: 1
+    preferSameZoneEureka: true
